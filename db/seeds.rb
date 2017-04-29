@@ -1,37 +1,43 @@
 require 'faker'
 
-poro = User.create(name: "Poro")
-fluffy = User.create(name: "Fluffy")
-whiskers = User.create(name: "Whiskers")
-parrot = User.create(name: "Party Parrot")
-maizie = User.create(name: "Maizie")
-gilly = User.create(name: "Gilly T. Dog")
+dwight = User.create(name: "Dwight")
+stanley = User.create(name: "Stanley")
+pam = User.create(name: "Pam")
+jim = User.create(name: "Jim")
+andy = User.create(name: "Andy")
+kelly = User.create(name: "Kelly")
 
-monster = User.create(name: "Monster")
-sloth = User.create(name: "Staging Sloth")
+michael = User.create(name: "Michael")
+jan = User.create(name: "Jan")
 
 # Monster manages a few critters, but reports to the Sloth
 
-poro.manager = monster
-fluffy.manager = monster
-whiskers.manager = monster
+dwight.manager = michael
+stanley.manager = michael
+pam.manager = michael
 
-monster.manager = sloth
+michael.manager = jan
 
 # Non-standard many-to-many relationships
+
+Item.create(
+  description: "Here-Comes-Treble-brand bow-tie",
+  seller: andy,
+  broker: andy
+)
 
 # Item has a `seller` and `broker` - both users
 5.times do
   Item.create(
     description: Faker::Hipster.sentence(4),
-    seller: gilly,
-    broker: [gilly, monster].sample
+    seller: kelly,
+    broker: [kelly, michael].sample
   )
 end
 
 30.times do
   PurchasedItem.create(
-    buyer: [monster, parrot, gilly, whiskers, sloth].sample,
+    buyer: [michael, jim, kelly, pam, jan].sample,
     item: Item.all.sample
   )
 end
