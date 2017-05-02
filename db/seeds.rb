@@ -10,13 +10,17 @@ kelly = User.create(name: "Kelly")
 michael = User.create(name: "Michael")
 jan = User.create(name: "Jan")
 
-# Monster manages a few critters, but reports to the Sloth
-
 dwight.manager = michael
+dwight.save!
+
 stanley.manager = michael
+stanley.save!
+
 pam.manager = michael
+pam.save!
 
 michael.manager = jan
+michael.save!
 
 # Non-standard many-to-many relationships
 
