@@ -54,11 +54,14 @@ The code in this repo will help you configure your setup. Note each of the relat
 Test your code with:
 
 ```
-gilly = User.find_by(name: "Gilly T. Dog")
-gilly.items_for_sale
-gilly.items_as_broker
-monster.items_as_broker
+kelly = User.find_by(name: "Kelly")
+kelly.items_for_sale
+kelly.items_as_broker
+michael.items_as_broker
 Item.last.buyers
 ```
 
 Take a look in `app/models` to see how the ActiveRecord associations were defined.
+
+Article that I found very helpful
+https://medium.com/@jbmilgrom/active-record-many-to-many-self-join-table-e0992c27c1e
