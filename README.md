@@ -62,3 +62,6 @@ Item.last.buyers
 ```
 
 Take a look in `app/models` to see how the ActiveRecord associations were defined.
+
+Article that I found very helpful
+https://medium.com/@jbmilgrom/active-record-many-to-many-self-join-table-e0992c27c1e
