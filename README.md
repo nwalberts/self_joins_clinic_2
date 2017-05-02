@@ -1,3 +1,5 @@
+This is a reskinned version of a wonderful clinic that Justin Huynh put together. Much of the credit is his, and his original app can be found here https://github.com/justinhuynh/self_joins_clinic
+
 # Custom Joins in ActiveRecord
 
 ```
