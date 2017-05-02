@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :employees, class_name: "User", foreign_key: "manager_id"
-  belongs_to :manager, class_name: "User", inverse_of: :employees
+  belongs_to :manager, class_name: "User"
 
 # ======
   # has_many :managers, through: :superiors, source: :relationships
